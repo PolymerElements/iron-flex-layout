@@ -244,6 +244,68 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       align-self: stretch;
     }
 
+    /*******************************
+              Other Layout
+    *******************************/
+
+    --layout-block: {
+      display: block;
+    }
+
+    --layout-invisible: {
+      visibility: hidden !important;
+    }
+
+    --layout-relative: {
+      position: relative;
+    }
+
+    --layout-fit: {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    --layout-scroll: {
+      -webkit-overflow-scrolling: touch;
+      overflow: auto;
+    }
+
+    /* fixed position */
+
+    --layout-fixed-bottom:,
+    --layout-fixed-left:,
+    --layout-fixed-right:,
+    --layout-fixed-top: {
+      position: fixed;
+    }
+
+    --layout-fixed-top: {
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+    --layout-fixed-right: {
+      top: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    --layout-fixed-bottom: {
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    --layout-fixed-left: {
+      top: 0;
+      bottom: 0;
+      left: 0;
+    }
+
   }
 
 </style>
