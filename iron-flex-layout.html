@@ -10,7 +10,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <link rel="import" href="../polymer/polymer.html">
 
-<style is="x-style">
+<style is="custom-style">
 
   * {
 
@@ -27,7 +27,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
 
     --layout-horizontal: {
-      /* mixin(--layout); */
+      /* @apply(--layout); */
       display: -ms-flexbox;
       display: -webkit-flex;
       display: flex;
@@ -44,7 +44,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
 
     --layout-vertical: {
-      /* mixin(--layout); */
+      /* @apply(--layout); */
       display: -ms-flexbox;
       display: -webkit-flex;
       display: flex;
@@ -209,7 +209,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
 
     --layout-center-center: {
-      /* mixin(--layout-center --layout-center-justified); */
+      /* @apply(--layout-center --layout-center-justified); */
       -ms-flex-align: center;
       -webkit-align-items: center;
       align-items: center;
