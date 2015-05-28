@@ -2,6 +2,7 @@
   "name": "iron-flex-layout",
   "version": "1.0.0",
   "private": true,
+  "license": "http://polymer.github.io/LICENSE.txt",
   "authors": [
     "The Polymer Authors"
   ],
