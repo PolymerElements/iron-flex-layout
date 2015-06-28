@@ -1,0 +1,80 @@
+.fullbleed {
+  margin: 0;
+  height: 100vh;
+}
+
+.layout.horizontal {
+  @apply(--layout-horizontal);
+}
+
+.layout.vertical {
+  @apply(--layout-vertical);
+}
+
+.layout.wrap {
+  @apply(--layout-wrap);
+}
+
+.layout.start {
+  @apply(--layout-start);
+}
+
+.layout.center {
+  @apply(--layout-center);
+}
+
+.layout.end {
+  @apply(--layout-start);
+}
+
+.layout.center-center {
+  @apply(--layout-center-center);
+}
+
+.flex {
+  @apply(--layout-flex);
+}
+
+.flex-2 {
+  @apply(--layout-flex-2);
+}
+
+.flex-3 {
+  @apply(--layout-flex-3);
+}
+
+.flex-4 {
+  @apply(--layout-flex-4);
+}
+
+.flex-5 {
+  @apply(--layout-flex-5);
+}
+
+.flex-6 {
+  @apply(--layout-flex-6);
+}
+
+/* relative position */
+
+.layout.relative {
+  @apply(--layout-relative);
+}
+
+/* fixed position */
+
+.layout.fixed.top {
+  @apply(--layout-fixed-top);
+}
+
+.layout.fixed.right {
+  @apply(--layout-fixed-right);
+}
+
+.layout.fixed.bottom {
+  @apply(--layout-fixed-bottom);
+}
+
+.layout.fixed.left {
+  @apply(--layout-fixed-left);
+}
