@@ -10,6 +10,38 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <link rel="import" href="../polymer/polymer.html">
 
+<!-- 
+This custom stylesheet provides a set of layout mixins that implement
+CSS flexible box (flexbox) layout.
+
+To apply the mixins, use the `@apply` function:
+
+    <style is="custom-style">
+      .container {
+        @apply(--layout-horizontal);
+        @apply(--layout-center-center);
+      }
+    </style>
+
+    <div class="container">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>  
+
+This example shows the mixins being applied at the document level, using a `custom-style` element.
+
+Custom mixins can also be applied inside a Polymer element, using the `<style>` tag inside
+the element's `<dom-module>`. See the Polymer library documentation for more information on using
+custom properties and mixins.
+
+The `classes/iron-flex-layout.html` file contains a similar set of rules that can be used
+by adding CSS classes to your elements instead of applying custom mixins.
+
+@demo demo/index.html
+@polymerBehavior iron-flex-layout
+-->
+
 <style is="custom-style">
 
   :root {
