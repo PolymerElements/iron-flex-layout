@@ -10,8 +10,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <link rel="import" href="../polymer/polymer.html">
 
-<style is="custom-style">
+<style>
+  /* IE 10 support for HTML5 hidden attr */
+  [hidden] {
+    display: none !important;
+  }
+</style>
 
+<style is="custom-style">
   :root {
 
     --layout: {
@@ -276,7 +282,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     };
 
     /* fixed position */
-    
+
     --layout-fixed-top: {
       position: fixed;
       top: 0;
