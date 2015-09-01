@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "paper-styles": "polymerelements/paper-styles#^1.0.0",
-    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0",
+    "iron-component-page": "polymerelements/iron-component-page#^1.0.0"
   }
 }
