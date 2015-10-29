@@ -9,8 +9,6 @@ Edit this file, and the bot will squash your changes :)
 
 -->
 
-_[Demo and API Docs](https://elements.polymer-project.org/elements/iron-flex-layout)_
-
 
 ##&lt;iron-flex-layout&gt;
 
