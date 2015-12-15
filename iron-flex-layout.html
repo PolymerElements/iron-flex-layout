@@ -24,29 +24,6 @@ A complete [guide](https://elements.polymer-project.org/guides/flex-layout) to `
 @demo demo/index.html
 -->
 
-<!-- Use this if you want to make sure that hidden$= on any of this element's
-  children works -->
-<dom-module id="hidden-descendants">
-  <template>
-    <style>
-      [hidden] {
-        display: none !important;
-      }
-    </style>
-  </template>
-<dom-module>
-
-<!-- Use this if you want to make sure that [hidden] works on this element -->
-<dom-module id="hidden-host">
-  <template>
-    <style>
-      :host([hidden]) {
-        display: none !important;
-      }
-    </style>
-  </template>
-<dom-module>
-
 <style>
   /* IE 10 support for HTML5 hidden attr */
   [hidden] {
