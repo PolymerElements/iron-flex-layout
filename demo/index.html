@@ -88,6 +88,36 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </demo-snippet>
   </div>
 
+  <h4>Flexible children with not-wrapping content</h4>
+  <div class="vertical-section">
+    <demo-snippet>
+      <template>
+        <style is="custom-style">
+          .flex-horizontal {
+            width: 300px;
+            @apply(--layout-horizontal);
+          }
+          .flexchild {
+            @apply(--layout-flex);
+          }
+          .text {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        </style>
+
+        <div class="container flex-horizontal">
+          <div>one</div>
+          <div class="flexchild">
+            <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+          </div>
+          <div>three</div>
+        </div>
+      </template>
+    </demo-snippet>
+  </div>
+
   <h4>Flexible children in vertical layouts</h4>
   <div class="vertical-section">
     <demo-snippet>

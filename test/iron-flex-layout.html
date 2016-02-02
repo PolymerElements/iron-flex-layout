@@ -1,0 +1,161 @@
+<!doctype html>
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<html>
+
+<head>
+
+  <title>iron-flex-layout tests</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+
+  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+  <script src="../../web-component-tester/browser.js"></script>
+  <link rel="import" href="../../iron-flex-layout/iron-flex-layout.html">
+
+  <style is="custom-style">
+    .fixed-width {
+      width: 400px;
+    }
+
+    .fixed-height {
+      height: 400px;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+    }
+
+    .horizontal {
+      @apply(--layout-horizontal);
+    }
+
+    .vertical {
+      @apply(--layout-vertical);
+    }
+
+    .flex {
+      @apply(--layout-flex);
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <test-fixture id="horizontal">
+    <template>
+      <section class="horizontal fixed-width">
+        <div class="flex box">box</div>
+        <div class="flex box">box</div>
+      </section>
+    </template>
+  </test-fixture>
+
+  <test-fixture id="vertical">
+    <template>
+      <section class="vertical fixed-height">
+        <div class="flex box">box</div>
+        <div class="flex box">box</div>
+      </section>
+    </template>
+  </test-fixture>
+
+  <script>
+    suite('horizontal', function() {
+      var container, children;
+
+      var checkPositionAndSize = function(childWidth) {
+        var rect = container.getBoundingClientRect();
+        for (var i = 0; i < children.length; i++) {
+          var cRect = children[i].getBoundingClientRect();
+          assert.equal(cRect.width, childWidth, 'correct width');
+          assert.equal(cRect.left, rect.left + i * childWidth, 'correct left');
+        }
+      }
+
+      setup(function() {
+        container = fixture('horizontal');
+        children = Polymer.dom(container).children;
+      });
+
+      test('children are correctly positioned and sized', function() {
+        // container has width = 400px and 2 children, so each child shoud have width = 200px
+        checkPositionAndSize(200);
+      });
+
+      test('bigger content in a flex child does not affect position and size', function() {
+        var child = document.createElement('div');
+        child.style.width = '300px';
+        children[0].appendChild(child);
+        // even if first child has content with width = 300px,
+        // each child shoud still have width = 200px
+        checkPositionAndSize(200);
+      });
+
+      test('non-flex child handled', function() {
+        var child = document.createElement('div');
+        child.style.width = '300px';
+        container.appendChild(child);
+        // Added a child with width = 300px, so only 100px remain
+        // for the other 2 children (50px each).
+        checkPositionAndSize(50);
+      });
+
+    });
+
+    suite('vertical', function() {
+      var container, children;
+
+      var checkPositionAndSize = function(childHeight) {
+        var rect = container.getBoundingClientRect();
+        for (var i = 0; i < children.length; i++) {
+          var cRect = children[i].getBoundingClientRect();
+          assert.equal(cRect.height, childHeight, 'correct height');
+          assert.equal(cRect.top, rect.top + i * childHeight, 'correct top');
+        }
+      }
+
+      setup(function() {
+        container = fixture('vertical');
+        children = Polymer.dom(container).children;
+      });
+
+      test('children are correctly positioned and sized', function() {
+        checkPositionAndSize(200);
+      });
+
+      test('bigger content in a flex child does not affect position and size', function() {
+        var child = document.createElement('div');
+        child.style.height = '300px';
+        children[0].appendChild(child);
+
+        checkPositionAndSize(200);
+      });
+
+      test('non-flex child handled', function() {
+        var child = document.createElement('div');
+        child.style.height = '300px';
+        container.appendChild(child);
+
+        checkPositionAndSize(50);
+      });
+
+    });
+  </script>
+
+</body>
+
+</html>
