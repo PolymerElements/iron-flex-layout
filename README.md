@@ -12,9 +12,9 @@ thing! https://github.com/PolymerLabs/tedium/issues
 
 -->
 
-[![Build Status](https://travis-ci.org/PolymerElements/iron-flex-layout.svg?branch=master)](https://travis-ci.org/PolymerElements/iron-flex-layout)
+[![Build status](https://travis-ci.org/PolymerElements/iron-flex-layout.svg?branch=master)](https://travis-ci.org/PolymerElements/iron-flex-layout)
 
-_[Demo and API Docs](https://elements.polymer-project.org/elements/iron-flex-layout)_
+_[Demo and API docs](https://elements.polymer-project.org/elements/iron-flex-layout)_
 
 
 ##&lt;iron-flex-layout&gt;
