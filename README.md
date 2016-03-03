@@ -32,7 +32,7 @@ Sample use:
 
 ```html
 <link rel="import" href="../iron-flex-layout/iron-flex-layout-classes.html">
-<style is="custom-style" include="iron-flex iron-flex-alignment">
+<style is="custom-style" include="iron-flex iron-flex-alignment"></style>
 
 <div class="layout horizontal layout-start">
   <div>cross axis start alignment</div>
