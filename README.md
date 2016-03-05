@@ -39,7 +39,7 @@ Sample use:
 </div>
 ```
 
-1. [Custom CSS mixins](https://github.com/PolymerElements/iron-flex-layout/blob/master/iron-flex-layout.html).
+2. [Custom CSS mixins](https://github.com/PolymerElements/iron-flex-layout/blob/master/iron-flex-layout.html).
 The mixin stylesheet includes custom CSS mixins that can be applied inside a CSS rule using the `@apply` function.
 
 Please note that the old [/deep/ layout classes](https://github.com/PolymerElements/iron-flex-layout/tree/master/classes)
