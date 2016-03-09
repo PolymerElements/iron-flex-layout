@@ -30,17 +30,18 @@ in every element that needs to use them.
 
 Sample use:
 
-```html
-<link rel="import" href="../iron-flex-layout/iron-flex-layout-classes.html">
-<style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+   <link rel="import" href="../iron-flex-layout/iron-flex-layout-classes.html">
 
-<div class="layout horizontal layout-start">
-  <div>cross axis start alignment</div>
-</div>
-```
+   <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+
+   <div class="layout horizontal layout-start">
+     <div>cross axis start alignment</div>
+   </div>
 
 1. [Custom CSS mixins](https://github.com/PolymerElements/iron-flex-layout/blob/master/iron-flex-layout.html).
 The mixin stylesheet includes custom CSS mixins that can be applied inside a CSS rule using the `@apply` function.
+
+
 
 Please note that the old [/deep/ layout classes](https://github.com/PolymerElements/iron-flex-layout/tree/master/classes)
 are deprecated, and should not be used. To continue using layout properties
