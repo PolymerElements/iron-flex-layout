@@ -45,16 +45,8 @@ A complete [guide](https://elements.polymer-project.org/guides/flex-layout) to `
 @pseudoElement iron-flex-layout
 @demo demo/index.html
 -->
-
-<style>
-  /* IE 10 support for HTML5 hidden attr */
-  [hidden] {
-    display: none !important;
-  }
-</style>
-
 <style is="custom-style">
-  :root {
+  html {
 
     --layout: {
       display: -ms-flexbox;
@@ -69,7 +61,7 @@ A complete [guide](https://elements.polymer-project.org/guides/flex-layout) to `
     };
 
     --layout-horizontal: {
-      @apply(--layout);
+      @apply --layout;
 
       -ms-flex-direction: row;
       -webkit-flex-direction: row;
@@ -77,7 +69,7 @@ A complete [guide](https://elements.polymer-project.org/guides/flex-layout) to `
     };
 
     --layout-horizontal-reverse: {
-      @apply(--layout);
+      @apply --layout;
 
       -ms-flex-direction: row-reverse;
       -webkit-flex-direction: row-reverse;
@@ -85,7 +77,7 @@ A complete [guide](https://elements.polymer-project.org/guides/flex-layout) to `
     };
 
     --layout-vertical: {
-      @apply(--layout);
+      @apply --layout;
 
       -ms-flex-direction: column;
       -webkit-flex-direction: column;
@@ -93,7 +85,7 @@ A complete [guide](https://elements.polymer-project.org/guides/flex-layout) to `
     };
 
     --layout-vertical-reverse: {
-      @apply(--layout);
+      @apply --layout;
 
       -ms-flex-direction: column-reverse;
       -webkit-flex-direction: column-reverse;
@@ -104,12 +96,6 @@ A complete [guide](https://elements.polymer-project.org/guides/flex-layout) to `
       -ms-flex-wrap: wrap;
       -webkit-flex-wrap: wrap;
       flex-wrap: wrap;
-    };
-    
-    --layout-no-wrap: {
-      -ms-flex-wrap: nowrap;
-      -webkit-flex-wrap: nowrap;
-      flex-wrap: nowrap;
     };
 
     --layout-wrap-reverse: {
@@ -263,8 +249,8 @@ A complete [guide](https://elements.polymer-project.org/guides/flex-layout) to `
     };
 
     --layout-center-center: {
-      @apply(--layout-center);
-      @apply(--layout-center-justified);
+      @apply --layout-center;
+      @apply --layout-center-justified;
     };
 
     /* self alignment */

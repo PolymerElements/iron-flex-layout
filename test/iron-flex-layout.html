@@ -41,7 +41,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         min-height: 0;
         height: 50px;
       }
-      .relative { @apply(--layout-relative); }
+      .relative { @apply --layout-relative; }
       .container.relative > div {
         min-width: 50px;
         min-height: 50px;
@@ -56,29 +56,29 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       #c4 { background-color: #03A9F4; }
       #c5 { background-color: #E91E63; }
 
-      .horizontal { @apply(--layout-horizontal); }
-      .horizontal-reverse { @apply(--layout-horizontal-reverse); }
-      .vertical { @apply(--layout-vertical); }
-      .vertical-reverse { @apply(--layout-vertical-reverse); }
-      .wrap { @apply(--layout-wrap); }
-      .wrap-reverse { @apply(--layout-wrap-reverse); }
-      .flex { @apply(--layout-flex); }
-      .flex2 { @apply(--layout-flex-2); }
-      .flex3 { @apply(--layout-flex-3); }
-      .center { @apply(--layout-center); }
-      .start { @apply(--layout-start); }
-      .end { @apply(--layout-end); }
-      .start-justified { @apply(--layout-start-justified); }
-      .center-justified { @apply(--layout-center-justified); }
-      .end-justified { @apply(--layout-end-justified); }
-      .justified { @apply(--layout-justified); }
-      .around-justified { @apply(--layout-around-justified); }
-      .fit { @apply(--layout-fit); }
-      .start-aligned { @apply(--layout-start-aligned); }
-      .end-aligned { @apply(--layout-end-aligned); }
-      .center-aligned { @apply(--layout-center-aligned); }
-      .between-aligned { @apply(--layout-between-aligned); }
-      .around-aligned { @apply(--layout-around-aligned); }
+      .horizontal { @apply --layout-horizontal; }
+      .horizontal-reverse { @apply --layout-horizontal-reverse; }
+      .vertical { @apply --layout-vertical; }
+      .vertical-reverse { @apply --layout-vertical-reverse; }
+      .wrap { @apply --layout-wrap; }
+      .wrap-reverse { @apply --layout-wrap-reverse; }
+      .flex { @apply --layout-flex; }
+      .flex2 { @apply --layout-flex-2; }
+      .flex3 { @apply --layout-flex-3; }
+      .center { @apply --layout-center; }
+      .start { @apply --layout-start; }
+      .end { @apply --layout-end; }
+      .start-justified { @apply --layout-start-justified; }
+      .center-justified { @apply --layout-center-justified; }
+      .end-justified { @apply --layout-end-justified; }
+      .justified { @apply --layout-justified; }
+      .around-justified { @apply --layout-around-justified; }
+      .fit { @apply --layout-fit; }
+      .start-aligned { @apply --layout-start-aligned; }
+      .end-aligned { @apply --layout-end-aligned; }
+      .center-aligned { @apply --layout-center-aligned; }
+      .between-aligned { @apply --layout-between-aligned; }
+      .around-aligned { @apply --layout-around-aligned; }
 
     </style>
   </head>
@@ -133,7 +133,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <script>
       function positionEquals(node, top, bottom, left, right) {
         var rect = node.getBoundingClientRect();
-        return rect.top === top && rect.bottom === bottom && 
+        return rect.top === top && rect.bottom === bottom &&
                rect.left === left && rect.right === right;
       }
       suite('basic layout', function() {
