@@ -19,13 +19,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
 
   <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+  <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
   <link rel="import" href="../iron-flex-layout.html">
 
-  <style is="custom-style">
+  <style is="custom-style" include="demo-pages-shared-styles">
     demo-snippet {
       --demo-snippet-demo: {
         padding: 0;
-      }
+      };
     }
 
     .container {
@@ -33,6 +34,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       padding: 5px;
       margin: 0;
     }
+
     .container > div {
       padding: 15px;
       margin: 5px;
@@ -48,7 +50,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 </head>
 <body unresolved class="fullbleed">
-  <div class="main-container">
+  <div class="vertical-section-container centered">
     <h4>Horizontal and vertical layout</h4>
     <demo-snippet>
       <template>
