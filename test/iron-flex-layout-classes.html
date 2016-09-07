@@ -16,11 +16,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
 
-    <script src="../../webcomponentsjs/webcomponents.js"></script>
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
     <script src="../../web-component-tester/browser.js"></script>
     <link rel="import" href="../iron-flex-layout-classes.html">
 
-    <style is="custom-style" include="iron-flex iron-flex-reverse iron-flex-factors iron-flex-alignment iron-positioning">
+    <custom-style><style is="custom-style" include="iron-flex iron-flex-reverse iron-flex-factors iron-flex-alignment iron-positioning">
       body {
         margin: 0;
         padding: 0;
@@ -54,7 +54,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       #c3 { background-color: #CDDC39; }
       #c4 { background-color: #03A9F4; }
       #c5 { background-color: #E91E63; }
-    </style>
+    </style></custom-style>
   </head>
   <body>
     <test-fixture id="basic">
@@ -107,7 +107,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <script>
       function positionEquals(node, top, bottom, left, right) {
         var rect = node.getBoundingClientRect();
-        return rect.top === top && rect.bottom === bottom && 
+        return rect.top === top && rect.bottom === bottom &&
                rect.left === left && rect.right === right;
       }
       suite('basic layout', function() {
