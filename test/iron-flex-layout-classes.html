@@ -20,41 +20,43 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <script src="../../web-component-tester/browser.js"></script>
     <link rel="import" href="../iron-flex-layout-classes.html">
 
-    <custom-style><style is="custom-style" include="iron-flex iron-flex-reverse iron-flex-factors iron-flex-alignment iron-positioning">
-      body {
-        margin: 0;
-        padding: 0;
-      }
-      .container {
-        width: 300px;
-        min-height: 50px;
-        background-color: #ccc;
-      }
-      .container > div {
-        width: 50px;
-        min-height: 50px; /* so that it can grow in vertical layouts. */
-      }
-      /* IE11 does not calculate flex proportions correctly in a vertical
-       * layout if the children just have a min-height. For those tests,
-       * use a fixed height instead. */
-      .container > div.fixed-height {
-        min-height: 0;
-        height: 50px;
-      }
-      .container.relative > div {
-        min-width: 50px;
-        min-height: 50px;
-        width: inherit;
-      }
-      .container.small { width: 120px; }
-      .container.tall { height: 300px; }
+    <custom-style>
+      <style is="custom-style" include="iron-flex iron-flex-reverse iron-flex-factors iron-flex-alignment iron-positioning">
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        .container {
+          width: 300px;
+          min-height: 50px;
+          background-color: #ccc;
+        }
+        .container > div {
+          width: 50px;
+          min-height: 50px; /* so that it can grow in vertical layouts. */
+        }
+        /* IE11 does not calculate flex proportions correctly in a vertical
+         * layout if the children just have a min-height. For those tests,
+         * use a fixed height instead. */
+        .container > div.fixed-height {
+          min-height: 0;
+          height: 50px;
+        }
+        .container.relative > div {
+          min-width: 50px;
+          min-height: 50px;
+          width: inherit;
+        }
+        .container.small { width: 120px; }
+        .container.tall { height: 300px; }
 
-      #c1 { background-color: #E91E63; }
-      #c2 { background-color: #03A9F4; }
-      #c3 { background-color: #CDDC39; }
-      #c4 { background-color: #03A9F4; }
-      #c5 { background-color: #E91E63; }
-    </style></custom-style>
+        #c1 { background-color: #E91E63; }
+        #c2 { background-color: #03A9F4; }
+        #c3 { background-color: #CDDC39; }
+        #c4 { background-color: #03A9F4; }
+        #c5 { background-color: #E91E63; }
+      </style>
+    </custom-style>
   </head>
   <body>
     <test-fixture id="basic">
