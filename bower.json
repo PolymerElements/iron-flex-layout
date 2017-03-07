@@ -18,7 +18,7 @@
     "url": "git://github.com/PolymerElements/iron-flex-layout.git"
   },
   "dependencies": {
-    "polymer": "polymer/polymer#2.0-preview"
+    "polymer": "polymer/polymer#^2.0.0-rc.1"
   },
   "devDependencies": {
     "test-fixture": "PolymerElements/test-fixture#^3.0.0-rc.1",
@@ -27,9 +27,6 @@
     "iron-demo-helpers": "polymerelements/iron-demo-helpers#2.0-preview"
   },
   "ignore": [],
-  "resolutions": {
-    "test-fixture": "^2.0.0"
-  },
   "variants": {
     "1.x": {
       "dependencies": {
