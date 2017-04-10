@@ -206,20 +206,26 @@ The classes listed here are included in the `iron-flex` module of the `iron-flex
 <custom-element-demo>
   <template>
     <link rel="import" href="iron-flex-layout.html">
-    <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
-    <style>
-      .container {
-        background-color: #ccc;
-        padding: 4px;
-      }
+    <dom-module id="demo-element">
+      <template>
+        <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+        <style>
+          .container {
+            background-color: #ccc;
+            padding: 4px;
+          }
 
-      .container div {
-        background-color: white;
-        padding: 12px;
-        margin: 4px;
-      }
-    </style>
-    <next-code-block></next-code-block>
+          .container div {
+            background-color: white;
+            padding: 12px;
+            margin: 4px;
+          }
+        </style>
+        <next-code-block></next-code-block>
+      </template>
+      <script>Polymer({is: "demo-element"});</script>
+    </dom-module>
+    <demo-element></demo-element>
   </template>
 </custom-element-demo>
 ```
@@ -266,20 +272,26 @@ The classes listed here are included in the `iron-flex` module of the `iron-flex
 <custom-element-demo>
   <template>
     <link rel="import" href="iron-flex-layout.html">
-    <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
-    <style>
-      .container {
-        background-color: #ccc;
-        padding: 4px;
-      }
+    <dom-module id="demo-element">
+      <template>
+        <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+        <style>
+          .container {
+            background-color: #ccc;
+            padding: 4px;
+          }
 
-      .container div {
-        background-color: white;
-        padding: 12px;
-        margin: 4px;
-      }
-    </style>
-    <next-code-block></next-code-block>
+          .container div {
+            background-color: white;
+            padding: 12px;
+            margin: 4px;
+          }
+        </style>
+        <next-code-block></next-code-block>
+      </template>
+      <script>Polymer({is: "demo-element"});</script>
+    </dom-module>
+    <demo-element></demo-element>
   </template>
 </custom-element-demo>
 ```
@@ -320,20 +332,26 @@ The same rules can be used for children in vertical layouts.
 <custom-element-demo>
   <template>
     <link rel="import" href="iron-flex-layout.html">
-    <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
-    <style>
-      .container {
-        background-color: #ccc;
-        padding: 4px;
-      }
+    <dom-module id="demo-element">
+      <template>
+        <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+        <style>
+          .container {
+            background-color: #ccc;
+            padding: 4px;
+          }
 
-      .container div {
-        background-color: white;
-        padding: 12px;
-        margin: 4px;
-      }
-    </style>
-    <next-code-block></next-code-block>
+          .container div {
+            background-color: white;
+            padding: 12px;
+            margin: 4px;
+          }
+        </style>
+        <next-code-block></next-code-block>
+      </template>
+      <script>Polymer({is: "demo-element"});</script>
+    </dom-module>
+    <demo-element></demo-element>
   </template>
 </custom-element-demo>
 ```
@@ -383,20 +401,26 @@ The classes listed here are included in the `iron-flex-factors` module of the `i
 <custom-element-demo>
   <template>
     <link rel="import" href="iron-flex-layout.html">
-    <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
-    <style>
-      .container {
-        background-color: #ccc;
-        padding: 4px;
-      }
+    <dom-module id="demo-element">
+      <template>
+        <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+        <style>
+          .container {
+            background-color: #ccc;
+            padding: 4px;
+          }
 
-      .container div {
-        background-color: white;
-        padding: 12px;
-        margin: 4px;
-      }
-    </style>
-    <next-code-block></next-code-block>
+          .container div {
+            background-color: white;
+            padding: 12px;
+            margin: 4px;
+          }
+        </style>
+        <next-code-block></next-code-block>
+      </template>
+      <script>Polymer({is: "demo-element"});</script>
+    </dom-module>
+    <demo-element></demo-element>
   </template>
 </custom-element-demo>
 ```
@@ -433,20 +457,26 @@ By default, children stretch to fit the cross-axis (e.g. _vertical_ stretching i
 <custom-element-demo>
   <template>
     <link rel="import" href="iron-flex-layout-classes.html">
-    <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
-    <style>
-      .container {
-        background-color: #ccc;
-        padding: 4px;
-      }
+    <dom-module id="demo-element">
+      <template>
+        <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+        <style>
+          .container {
+            background-color: #ccc;
+            padding: 4px;
+          }
 
-      .container div {
-        background-color: white;
-        padding: 12px;
-        margin: 4px;
-      }
-    </style>
-    <next-code-block></next-code-block>
+          .container div {
+            background-color: white;
+            padding: 12px;
+            margin: 4px;
+          }
+        </style>
+        <next-code-block></next-code-block>
+      </template>
+      <script>Polymer({is: "demo-element"});</script>
+    </dom-module>
+    <demo-element></demo-element>
   </template>
 </custom-element-demo>
 ```
