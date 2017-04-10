@@ -491,103 +491,246 @@ Center _across_ the main axis (e.g. _vertical_ centering elements in a _horizont
 by adding the `center` class or applying the `--layout-center` mixin.
 
 **Example: classes, cross-axis center**
-
-    <div class="horizontal layout center">
-      <div>Center</div>
-    </div>
-
-**Example: mixins, cross-axis center**
-
-    <dom-module id="mixin-demo">
-
-      <style>
-        .container {
-          @apply --layout-horizontal;
-          @apply --layout-center;
-        }
-      </style>
-
+<!--
+```
+<custom-element-demo>
+  <template>
+    <link rel="import" href="iron-flex-layout-classes.html">
+    <dom-module id="demo-element">
       <template>
+        <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+        <style>
+          .container {
+            background-color: #ccc;
+            padding: 4px;
+          }
 
-        <div class="container">
-          <div>Center</div>
-        </div>
-
-        ...
-
-**Example output, cross-axis center**
-
-<div class="horizontal layout center demo tall">
+          .container div {
+            background-color: white;
+            padding: 12px;
+            margin: 4px;
+          }
+        </style>
+        <next-code-block></next-code-block>
+      </template>
+      <script>Polymer({is: "demo-element"});</script>
+    </dom-module>
+    <demo-element></demo-element>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<div class="horizontal layout center">
   <div>Center</div>
 </div>
+```
+
+**Example: mixins, cross-axis center**
+<!--
+```
+<custom-element-demo>
+  <template>
+    <link rel="import" href="iron-flex-layout.html">
+    <dom-module id="demo-element">
+      <template>
+        <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+        <style>
+          .container {
+            background-color: #ccc;
+            padding: 4px;
+            height: 154px;
+          }
+
+          .container div {
+            background-color: white;
+            padding: 12px;
+            margin: 4px;
+          }
+        </style>
+        <next-code-block></next-code-block>
+      </template>
+      <script>Polymer({is: "demo-element"});</script>
+    </dom-module>
+    <demo-element></demo-element>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<style is="custom-style">
+  .container {
+    @apply(--layout-horizontal);
+    @apply(--layout-center);
+  }
+</style>
+
+<div class="container">
+  <div>Center</div>
+</div>
+```
 
 You can also position at the top/bottom (or left/right in `vertical` layouts) using the `start` or `end`
 classes, or by applying the `--layout-start` or `--layout-end` mixins.
 
 
 **Example: classes, cross-axis start**
-
-    <div class="horizontal layout start">
-      <div>start</div>
-    </div>
-
-**Example: mixins, cross-axis start**
-
-    <dom-module id="mixin-demo">
-
-      <style>
-        .container {
-          @apply --layout-horizontal;
-          @apply --layout-start;
-        }
-      </style>
-
+<!--
+```
+<custom-element-demo>
+  <template>
+    <link rel="import" href="iron-flex-layout-classes.html">
+    <dom-module id="demo-element">
       <template>
+        <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+        <style>
+          .container {
+            background-color: #ccc;
+            padding: 4px;
+          }
 
-        <div class="container">
-          <div>start</div>
-        </div>
-
-        ...
-
-**Example output, cross-axis start**
-
-<div class="horizontal layout start demo tall">
+          .container div {
+            background-color: white;
+            padding: 12px;
+            margin: 4px;
+          }
+        </style>
+        <next-code-block></next-code-block>
+      </template>
+      <script>Polymer({is: "demo-element"});</script>
+    </dom-module>
+    <demo-element></demo-element>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<div class="horizontal layout start">
   <div>start</div>
 </div>
+```
 
+**Example: mixins, cross-axis start**
+<!--
+```
+<custom-element-demo>
+  <template>
+    <link rel="import" href="iron-flex-layout.html">
+    <dom-module id="demo-element">
+      <template>
+        <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+        <style>
+          .container {
+            background-color: #ccc;
+            padding: 4px;
+          }
+
+          .container div {
+            background-color: white;
+            padding: 12px;
+            margin: 4px;
+          }
+        </style>
+        <next-code-block></next-code-block>
+      </template>
+      <script>Polymer({is: "demo-element"});</script>
+    </dom-module>
+    <demo-element></demo-element>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<style is="custom-style">
+  .container {
+    @apply(--layout-horizontal);
+    @apply(--layout-start);
+  }
+</style>
+
+<div class="container">
+  <div>start</div>
+</div>
+```
 
 **Example: classes, cross-axis end**
-
-    <div class="horizontal layout end">
-      <div>end</div>
-    </div>
-
-**Example: mixins, cross-axis end**
-
-    <dom-module id="mixin-demo">
-
-      <style>
-        .container {
-          @apply --layout-horizontal;
-          @apply --layout-end;
-        }
-      </style>
-
+<!--
+```
+<custom-element-demo>
+  <template>
+    <link rel="import" href="iron-flex-layout-classes.html">
+    <dom-module id="demo-element">
       <template>
+        <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+        <style>
+          .container {
+            background-color: #ccc;
+            padding: 4px;
+          }
 
-        <div class="container">
-          <div>end</div>
-        </div>
-
-        ...
-
-**Example output, cross-axis end**
-
-<div class="horizontal layout end demo tall">
+          .container div {
+            background-color: white;
+            padding: 12px;
+            margin: 4px;
+          }
+        </style>
+        <next-code-block></next-code-block>
+      </template>
+      <script>Polymer({is: "demo-element"});</script>
+    </dom-module>
+    <demo-element></demo-element>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<div class="horizontal layout end">
   <div>end</div>
 </div>
+```
 
+**Example: mixins, cross-axis end**
+<!--
+```
+<custom-element-demo>
+  <template>
+    <link rel="import" href="iron-flex-layout.html">
+    <dom-module id="demo-element">
+      <template>
+        <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+        <style>
+          .container {
+            background-color: #ccc;
+            padding: 4px;
+          }
+
+          .container div {
+            background-color: white;
+            padding: 12px;
+            margin: 4px;
+          }
+        </style>
+        <next-code-block></next-code-block>
+      </template>
+      <script>Polymer({is: "demo-element"});</script>
+    </dom-module>
+    <demo-element></demo-element>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<style is="custom-style">
+  .container {
+    @apply(--layout-horizontal);
+    @apply(--layout-end);
+  }
+</style>
+
+<div class="container">
+  <div>end</div>
+</div>
+```
 
 ### Justification
 
@@ -606,94 +749,200 @@ Class | Mixin | Result
 The classes listed here are included in the `iron-flex-alignment` module of the `iron-flex-layout-classes` file.
 
 **Example: classes, start justified**
+<!--
+```
+<custom-element-demo>
+  <template>
+    <link rel="import" href="iron-flex-layout-classes.html">
+    <dom-module id="demo-element">
+      <template>
+        <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+        <style>
+          .container {
+            background-color: #ccc;
+            padding: 4px;
+          }
 
-    <div class="horizontal start-justified layout">
-      <div>start-justified</div>
-    </div>
-
-**Example output, start justified**
-
-<div class="horizontal start-justified layout demo">
+          .container div {
+            background-color: white;
+            padding: 12px;
+            margin: 4px;
+          }
+        </style>
+        <next-code-block></next-code-block>
+      </template>
+      <script>Polymer({is: "demo-element"});</script>
+    </dom-module>
+    <demo-element></demo-element>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<div class="horizontal start-justified layout">
   <div>start-justified</div>
 </div>
+```
 
 **Example: mixins, center justified**
-
-    <dom-module id="mixin-demo">
-
-      <style>
-        .container {
-          @apply --layout-horizontal;
-          @apply --layout-center-justified;
-        }
-      </style>
-
+<!--
+```
+<custom-element-demo>
+  <template>
+    <link rel="import" href="iron-flex-layout.html">
+    <dom-module id="demo-element">
       <template>
+        <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+        <style>
+          .container {
+            background-color: #ccc;
+            padding: 4px;
+          }
 
-        <div class="container">
-          <div>center-justified</div>
-        </div>
+          .container div {
+            background-color: white;
+            padding: 12px;
+            margin: 4px;
+          }
+        </style>
+        <next-code-block></next-code-block>
+      </template>
+      <script>Polymer({is: "demo-element"});</script>
+    </dom-module>
+    <demo-element></demo-element>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<style is="custom-style">
+  .container {
+    @apply(--layout-horizontal);
+    @apply(--layout-center-justified);
+  }
+</style>
 
-        ...
-
-**Example output, center justified**
-
-<div class="horizontal center-justified layout demo">
+<div class="container">
   <div>center-justified</div>
 </div>
+```
 
 **Example: classes, end justified**
+<!--
+```
+<custom-element-demo>
+  <template>
+    <link rel="import" href="iron-flex-layout-classes.html">
+    <dom-module id="demo-element">
+      <template>
+        <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+        <style>
+          .container {
+            background-color: #ccc;
+            padding: 4px;
+          }
 
-    <div class="horizontal end-justified layout">
-      <div>end-justified</div>
-    </div>
-
-**Example output, end justified**
-
-<div class="horizontal end-justified layout demo">
+          .container div {
+            background-color: white;
+            padding: 12px;
+            margin: 4px;
+          }
+        </style>
+        <next-code-block></next-code-block>
+      </template>
+      <script>Polymer({is: "demo-element"});</script>
+    </dom-module>
+    <demo-element></demo-element>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<div class="horizontal end-justified layout">
   <div>end-justified</div>
 </div>
+```
 
 **Example: mixins, equal space between elements**
-
-    <dom-module id="mixin-demo">
-
-      <style>
-        .container {
-          @apply --layout-horizontal;
-          @apply --layout-justified;
-        }
-      </style>
-
+<!--
+```
+<custom-element-demo>
+  <template>
+    <link rel="import" href="iron-flex-layout.html">
+    <dom-module id="demo-element">
       <template>
+        <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+        <style>
+          .container {
+            background-color: #ccc;
+            padding: 4px;
+          }
 
-        <div class="container">
-          <div>justified</div>
-          <div>justified</div>
-          <div>justified</div>
-        </div>
+          .container div {
+            background-color: white;
+            padding: 12px;
+            margin: 4px;
+          }
+        </style>
+        <next-code-block></next-code-block>
+      </template>
+      <script>Polymer({is: "demo-element"});</script>
+    </dom-module>
+    <demo-element></demo-element>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<style is="custom-style">
+  .container {
+    @apply(--layout-horizontal);
+    @apply(--layout-justified);
+  }
+</style>
 
-        ...
-
-**Example output, equal space between elements**
-
-<div class="horizontal justified layout demo">
+<div class="container">
   <div>justified</div>
   <div>justified</div>
   <div>justified</div>
 </div>
 
 **Example: classes, equal space around each element**
+<!--
+```
+<custom-element-demo>
+  <template>
+    <link rel="import" href="iron-flex-layout-classes.html">
+    <dom-module id="demo-element">
+      <template>
+        <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+        <style>
+          .container {
+            background-color: #ccc;
+            padding: 4px;
+          }
 
-    <div class="horizontal around-justified layout">
-      <div>around-justified</div>
-      <div>around-justified</div>
-    </div>
-
-<div class="horizontal around-justified layout demo">
+          .container div {
+            background-color: white;
+            padding: 12px;
+            margin: 4px;
+          }
+        </style>
+        <next-code-block></next-code-block>
+      </template>
+      <script>Polymer({is: "demo-element"});</script>
+    </dom-module>
+    <demo-element></demo-element>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<div class="horizontal around-justified layout">
   <div>around-justified</div>
   <div>around-justified</div>
 </div>
+```
 
 ## Self alignment
 
@@ -707,64 +956,108 @@ Class | Mixin | Result
 `self-stretch` | <code>--layout-self-stretch</code> | Stretches the child to fit the cross-axis.
 
 **Example: classes**
-
-    <div class="horizontal layout" style="height: 120px;">
-      <div class="flex self-start">Alpha</div>
-      <div class="flex self-center">Beta</div>
-      <div class="flex self-end">Gamma</div>
-      <div class="flex self-stretch">Delta</div>
-    </div>
-
-**Example: mixins**
-
-    <dom-module id="mixin-demo">
-
-      <style>
-        .container {
-          @apply --layout-horizontal;
-          @apply --layout-justified;
-          height: 120px;
-        }
-        .container div {
-          @apply --layout-flex;
-        }
-        .child1 {
-          @apply --layout-self-start;
-        }
-        .child2 {
-          @apply --layout-self-center;
-        }
-        .child3 {
-          @apply --layout-self-end;
-        }
-        .child4 {
-          @apply --layout-self-stretch;
-        }
-      </style>
-
+<!--
+```
+<custom-element-demo>
+  <template>
+    <link rel="import" href="iron-flex-layout-classes.html">
+    <dom-module id="demo-element">
       <template>
+        <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+        <style>
+          .container {
+            background-color: #ccc;
+            padding: 4px;
+          }
 
-        <div class="container">
-          <div class="child1">Alpha</div>
-          <div class="child2">Beta</div>
-          <div class="child3">Gamma</div>
-          <div class="child4">Delta</div>
-        </div>
-
-        ...
-
-**Example output**
-
-<div class="horizontal layout demo tall">
+          .container div {
+            background-color: white;
+            padding: 12px;
+            margin: 4px;
+          }
+        </style>
+        <next-code-block></next-code-block>
+      </template>
+      <script>Polymer({is: "demo-element"});</script>
+    </dom-module>
+    <demo-element></demo-element>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<div class="horizontal layout" style="height: 120px;">
   <div class="flex self-start">Alpha</div>
   <div class="flex self-center">Beta</div>
   <div class="flex self-end">Gamma</div>
   <div class="flex self-stretch">Delta</div>
 </div>
+```
 
-<aside><b>Note:</b> The <code>flex</code> class
+**Example: mixins**
+<!--
+```
+<custom-element-demo>
+  <template>
+    <link rel="import" href="iron-flex-layout.html">
+    <dom-module id="demo-element">
+      <template>
+        <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+        <style>
+          .container {
+            background-color: #ccc;
+            padding: 4px;
+          }
+
+          .container div {
+            background-color: white;
+            padding: 12px;
+            margin: 4px;
+          }
+        </style>
+        <next-code-block></next-code-block>
+      </template>
+      <script>Polymer({is: "demo-element"});</script>
+    </dom-module>
+    <demo-element></demo-element>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<style is="custom-style">
+  .container {
+    @apply(--layout-horizontal);
+    @apply(--layout-justified);
+    height: 120px;
+  }
+  .container div {
+    @apply(--layout-flex);
+  }
+  .child1 {
+    @apply(--layout-self-start);
+  }
+  .child2 {
+    @apply(--layout-self-center);
+  }
+  .child3 {
+    @apply(--layout-self-end);
+  }
+  .child4 {
+    @apply(--layout-self-stretch);
+  }
+</style>
+<div class="container">
+  <div class="child1">Alpha</div>
+  <div class="child2">Beta</div>
+  <div class="child3">Gamma</div>
+  <div class="child4">Delta</div>
+</div>
+```
+
+> <b>Note:</b> The <code>flex</code> class
 (and <code>--layout-flex</code> mixin) shown in these examples is
-added for the demo and not required for self-alignment.</aside>
+added for the demo and not required for self-alignment.
 
 
 ## Wrapping
@@ -772,22 +1065,43 @@ added for the demo and not required for self-alignment.</aside>
 Wrapped layouts can be enabled with the `wrap` class or `--layout-wrap` mixin.
 
 **Example: classes**
+<!--
+```
+<custom-element-demo>
+  <template>
+    <link rel="import" href="iron-flex-layout-classes.html">
+    <dom-module id="demo-element">
+      <template>
+        <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+        <style>
+          .container {
+            background-color: #ccc;
+            padding: 4px;
+          }
 
-    <div class="horizontal layout wrap" style="width: 220px">
-      <div>Alpha</div>
-      <div>Beta</div>
-      <div>Gamma</div>
-      <div>Delta</div>
-    </div>
-
-**Example output**
-
-<div class="horizontal layout wrap demo" style="width: 220px">
+          .container div {
+            background-color: white;
+            padding: 12px;
+            margin: 4px;
+          }
+        </style>
+        <next-code-block></next-code-block>
+      </template>
+      <script>Polymer({is: "demo-element"});</script>
+    </dom-module>
+    <demo-element></demo-element>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<div class="horizontal layout wrap" style="width: 220px">
   <div>Alpha</div>
   <div>Beta</div>
   <div>Gamma</div>
   <div>Delta</div>
 </div>
+```
 
 ## Reversed layouts
 
@@ -802,29 +1116,43 @@ Class | Mixin | Result
 The classes listed here are included in the `iron-flex-reverse` module of the `iron-flex-layout-classes` file.
 
 **Example: mixins**
-
-    <dom-module id="mixin-demo">
-
-      <style>
-        .container {
-          @apply --layout-horizontal-reverse;
-        }
-      </style>
-
+<!--
+```
+<custom-element-demo>
+  <template>
+    <link rel="import" href="iron-flex-layout.html">
+    <dom-module id="demo-element">
       <template>
+        <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+        <style>
+          .container {
+            background-color: #ccc;
+            padding: 4px;
+          }
 
-        <div class="container">
-          <div>Alpha</div>
-          <div>Beta</div>
-          <div>Gamma</div>
-          <div>Delta</div>
-        </div>
+          .container div {
+            background-color: white;
+            padding: 12px;
+            margin: 4px;
+          }
+        </style>
+        <next-code-block></next-code-block>
+      </template>
+      <script>Polymer({is: "demo-element"});</script>
+    </dom-module>
+    <demo-element></demo-element>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<style is="custom-style">
+  .container {
+    @apply(--layout-horizontal-reverse);
+  }
+</style>
 
-        ...
-
-**Example output**
-
-<div class="horizontal-reverse layout demo">
+<div class="container">
   <div>Alpha</div>
   <div>Beta</div>
   <div>Gamma</div>
@@ -836,17 +1164,20 @@ The classes listed here are included in the `iron-flex-reverse` module of the `i
 It's common to want the entire `<body>` to fit to the viewport. By themselves, Polymer's layout features on
 `<body>` don't achieve the result. You can make `<body>` take up the entire viewport by adding the `fullbleed` class:
 
-    <body class="fullbleed vertical layout">
-      <div class="flex">Fitting a fullbleed body.</div>
-    </body>
+```html
+<body class="fullbleed vertical layout">
+  <div class="flex">Fitting a fullbleed body.</div>
+</body>
+```
 
 This removes its margins and maximizes its height to the viewport. There is no equivalent mixin, but the same result can
 be achieved in CSS very simply:
-
-    body {
-      margin: 0;
-      height: 100vh;
-    }
+```css
+body {
+  margin: 0;
+  height: 100vh;
+}
+```
 
 This class is included in the `iron-positioning` module of the `iron-flex-layout-classes` file.
 
@@ -867,26 +1198,46 @@ Class | Mixin | Result
 
 The classes listed here are included in the `iron-positioning` module of the `iron-flex-layout-classes` file.
 
-<aside><b>Note:</b>When using `fit` layout, the element must have an ancestor with fixed size and `position: relative` layout
+> <b>Note:</b>When using `fit` layout, the element must have an ancestor with fixed size and `position: relative` layout
 to fit inside of.
-</aside>
 
 
 **Example: classes**
+<!--
+```
+<custom-element-demo>
+  <template>
+    <link rel="import" href="iron-flex-layout-classes.html">
+    <dom-module id="demo-element">
+      <template>
+        <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+        <style>
+          .container {
+            background-color: #ccc;
+            padding: 4px;
+          }
 
-    <div>Before <span>[A Span]</span> After</div>
+          .container div {
+            background-color: white;
+            padding: 12px;
+            margin: 4px;
+          }
+        </style>
+        <next-code-block></next-code-block>
+      </template>
+      <script>Polymer({is: "demo-element"});</script>
+    </dom-module>
+    <demo-element></demo-element>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<div>Before <span>[A Span]</span> After</div>
 
-    <div>Before <span class="block">[A Block Span]</span> After</div>
-    <div>Before invisible span <span class="invisible">Not displayed</span> After invisible span</div>
-    <div class="relative" style="height: 100px;">
-      <div class="fit" style="background-color: #000;color: white">Fit</div>
-    </div>
-
-**Example output**
-
-<div class="demo">Before <span>[A Span]</span> After</div>
-<div class="demo">Before <span class="block">[A Block Span]</span> After</div>
-<div class="demo">Before invisible span <span class="invisible">Not displayed</span> After invisible span</div>
-<div class="relative" style="height: 100px;" class="demo">
+<div>Before <span class="block">[A Block Span]</span> After</div>
+<div>Before invisible span <span class="invisible">Not displayed</span> After invisible span</div>
+<div class="relative" style="height: 100px;">
   <div class="fit" style="background-color: #000;color: white">Fit</div>
 </div>
+```
