@@ -215,7 +215,7 @@ The classes listed here are included in the `iron-flex` module of the `iron-flex
             padding: 4px;
           }
 
-          .container div {
+          .container div, .layout div {
             background-color: white;
             padding: 12px;
             margin: 4px;
@@ -281,7 +281,7 @@ The classes listed here are included in the `iron-flex` module of the `iron-flex
             padding: 4px;
           }
 
-          .container div {
+          .container div, .layout div {
             background-color: white;
             padding: 12px;
             margin: 4px;
@@ -341,7 +341,7 @@ The same rules can be used for children in vertical layouts.
             padding: 4px;
           }
 
-          .container div {
+          .container div, .layout div {
             background-color: white;
             padding: 12px;
             margin: 4px;
@@ -410,7 +410,7 @@ The classes listed here are included in the `iron-flex-factors` module of the `i
             padding: 4px;
           }
 
-          .container div {
+          .container div, .layout div {
             background-color: white;
             padding: 12px;
             margin: 4px;
@@ -466,7 +466,7 @@ By default, children stretch to fit the cross-axis (e.g. _vertical_ stretching i
             padding: 4px;
           }
 
-          .container div {
+          .container div, .layout div {
             background-color: white;
             padding: 12px;
             margin: 4px;
@@ -505,7 +505,7 @@ by adding the `center` class or applying the `--layout-center` mixin.
             padding: 4px;
           }
 
-          .container div {
+          .container div, .layout div {
             background-color: white;
             padding: 12px;
             margin: 4px;
@@ -542,7 +542,7 @@ by adding the `center` class or applying the `--layout-center` mixin.
             height: 154px;
           }
 
-          .container div {
+          .container div, .layout div {
             background-color: white;
             padding: 12px;
             margin: 4px;
@@ -589,7 +589,7 @@ classes, or by applying the `--layout-start` or `--layout-end` mixins.
             padding: 4px;
           }
 
-          .container div {
+          .container div, .layout div {
             background-color: white;
             padding: 12px;
             margin: 4px;
@@ -625,7 +625,7 @@ classes, or by applying the `--layout-start` or `--layout-end` mixins.
             padding: 4px;
           }
 
-          .container div {
+          .container div, .layout div {
             background-color: white;
             padding: 12px;
             margin: 4px;
@@ -668,7 +668,7 @@ classes, or by applying the `--layout-start` or `--layout-end` mixins.
             padding: 4px;
           }
 
-          .container div {
+          .container div, .layout div {
             background-color: white;
             padding: 12px;
             margin: 4px;
@@ -704,7 +704,7 @@ classes, or by applying the `--layout-start` or `--layout-end` mixins.
             padding: 4px;
           }
 
-          .container div {
+          .container div, .layout div {
             background-color: white;
             padding: 12px;
             margin: 4px;
@@ -763,7 +763,7 @@ The classes listed here are included in the `iron-flex-alignment` module of the 
             padding: 4px;
           }
 
-          .container div {
+          .container div, .layout div {
             background-color: white;
             padding: 12px;
             margin: 4px;
@@ -799,7 +799,7 @@ The classes listed here are included in the `iron-flex-alignment` module of the 
             padding: 4px;
           }
 
-          .container div {
+          .container div, .layout div {
             background-color: white;
             padding: 12px;
             margin: 4px;
@@ -842,7 +842,7 @@ The classes listed here are included in the `iron-flex-alignment` module of the 
             padding: 4px;
           }
 
-          .container div {
+          .container div, .layout div {
             background-color: white;
             padding: 12px;
             margin: 4px;
@@ -878,7 +878,7 @@ The classes listed here are included in the `iron-flex-alignment` module of the 
             padding: 4px;
           }
 
-          .container div {
+          .container div, .layout div {
             background-color: white;
             padding: 12px;
             margin: 4px;
@@ -906,6 +906,7 @@ The classes listed here are included in the `iron-flex-alignment` module of the 
   <div>justified</div>
   <div>justified</div>
 </div>
+```
 
 **Example: classes, equal space around each element**
 <!--
@@ -922,7 +923,7 @@ The classes listed here are included in the `iron-flex-alignment` module of the 
             padding: 4px;
           }
 
-          .container div {
+          .container div, .layout div {
             background-color: white;
             padding: 12px;
             margin: 4px;
@@ -970,7 +971,7 @@ Class | Mixin | Result
             padding: 4px;
           }
 
-          .container div {
+          .container div, .layout div {
             background-color: white;
             padding: 12px;
             margin: 4px;
@@ -1009,7 +1010,7 @@ Class | Mixin | Result
             padding: 4px;
           }
 
-          .container div {
+          .container div, .layout div {
             background-color: white;
             padding: 12px;
             margin: 4px;
@@ -1079,7 +1080,7 @@ Wrapped layouts can be enabled with the `wrap` class or `--layout-wrap` mixin.
             padding: 4px;
           }
 
-          .container div {
+          .container div, .layout div {
             background-color: white;
             padding: 12px;
             margin: 4px;
@@ -1123,14 +1124,14 @@ The classes listed here are included in the `iron-flex-reverse` module of the `i
     <link rel="import" href="iron-flex-layout.html">
     <dom-module id="demo-element">
       <template>
-        <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+        <style is="custom-style" include="iron-flex iron-flex-alignment iron-flex-reverse"></style>
         <style>
           .container, .layout {
             background-color: #ccc;
             padding: 4px;
           }
 
-          .container div {
+          .container div, .layout div {
             background-color: white;
             padding: 12px;
             margin: 4px;
@@ -1213,12 +1214,12 @@ to fit inside of.
       <template>
         <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
         <style>
-          .container {
+          .container, .layout {
             background-color: #ccc;
             padding: 4px;
           }
 
-          .container div {
+          .container div, .layout div {
             background-color: white;
             padding: 12px;
             margin: 4px;
