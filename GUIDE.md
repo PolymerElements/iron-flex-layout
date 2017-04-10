@@ -210,7 +210,7 @@ The classes listed here are included in the `iron-flex` module of the `iron-flex
       <template>
         <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
         <style>
-          .container {
+          .container, .layout {
             background-color: #ccc;
             padding: 4px;
           }
@@ -276,7 +276,7 @@ The classes listed here are included in the `iron-flex` module of the `iron-flex
       <template>
         <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
         <style>
-          .container {
+          .container, .layout {
             background-color: #ccc;
             padding: 4px;
           }
@@ -336,7 +336,7 @@ The same rules can be used for children in vertical layouts.
       <template>
         <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
         <style>
-          .container {
+          .container, .layout {
             background-color: #ccc;
             padding: 4px;
           }
@@ -405,7 +405,7 @@ The classes listed here are included in the `iron-flex-factors` module of the `i
       <template>
         <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
         <style>
-          .container {
+          .container, .layout {
             background-color: #ccc;
             padding: 4px;
           }
@@ -482,7 +482,7 @@ By default, children stretch to fit the cross-axis (e.g. _vertical_ stretching i
 ```
 -->
 ```html
-<div class="horizontal layout container" style="height: 154px">
+<div class="horizontal layout" style="height: 154px">
   <div>Stretch Fill</div>
 </div>
 ```
@@ -521,7 +521,7 @@ by adding the `center` class or applying the `--layout-center` mixin.
 ```
 -->
 ```html
-<div class="horizontal layout center">
+<div class="horizontal layout center" style="height: 154px">
   <div>Center</div>
 </div>
 ```
@@ -565,7 +565,7 @@ by adding the `center` class or applying the `--layout-center` mixin.
   }
 </style>
 
-<div class="container">
+<div class="container" style="height: 154px">
   <div>Center</div>
 </div>
 ```
@@ -605,7 +605,7 @@ classes, or by applying the `--layout-start` or `--layout-end` mixins.
 ```
 -->
 ```html
-<div class="horizontal layout start">
+<div class="horizontal layout start" style="height: 154px">
   <div>start</div>
 </div>
 ```
@@ -620,7 +620,7 @@ classes, or by applying the `--layout-start` or `--layout-end` mixins.
       <template>
         <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
         <style>
-          .container {
+          .container, .layout {
             background-color: #ccc;
             padding: 4px;
           }
@@ -648,7 +648,7 @@ classes, or by applying the `--layout-start` or `--layout-end` mixins.
   }
 </style>
 
-<div class="container">
+<div class="container" style="height: 154px">
   <div>start</div>
 </div>
 ```
@@ -684,7 +684,7 @@ classes, or by applying the `--layout-start` or `--layout-end` mixins.
 ```
 -->
 ```html
-<div class="horizontal layout end">
+<div class="horizontal layout end" style="height: 154px">
   <div>end</div>
 </div>
 ```
@@ -699,7 +699,7 @@ classes, or by applying the `--layout-start` or `--layout-end` mixins.
       <template>
         <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
         <style>
-          .container {
+          .container, .layout {
             background-color: #ccc;
             padding: 4px;
           }
@@ -727,7 +727,7 @@ classes, or by applying the `--layout-start` or `--layout-end` mixins.
   }
 </style>
 
-<div class="container">
+<div class="container" style="height: 154px">
   <div>end</div>
 </div>
 ```
@@ -794,7 +794,7 @@ The classes listed here are included in the `iron-flex-alignment` module of the 
       <template>
         <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
         <style>
-          .container {
+          .container, .layout {
             background-color: #ccc;
             padding: 4px;
           }
@@ -873,7 +873,7 @@ The classes listed here are included in the `iron-flex-alignment` module of the 
       <template>
         <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
         <style>
-          .container {
+          .container, .layout {
             background-color: #ccc;
             padding: 4px;
           }
@@ -1004,7 +1004,7 @@ Class | Mixin | Result
       <template>
         <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
         <style>
-          .container {
+          .container, .layout {
             background-color: #ccc;
             padding: 4px;
           }
@@ -1125,7 +1125,7 @@ The classes listed here are included in the `iron-flex-reverse` module of the `i
       <template>
         <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
         <style>
-          .container {
+          .container, .layout {
             background-color: #ccc;
             padding: 4px;
           }
@@ -1158,6 +1158,7 @@ The classes listed here are included in the `iron-flex-reverse` module of the `i
   <div>Gamma</div>
   <div>Delta</div>
 </div>
+```
 
 ## Full bleed &lt;body>
 
