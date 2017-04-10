@@ -201,33 +201,42 @@ The classes listed here are included in the `iron-flex` module of the `iron-flex
 ```
 
 **Example: mixins**
-```html
-<dom-module id="mixin-demo">
-
-  <style>
-    .container {
-      @apply --layout-horizontal;
-    }
-  </style>
-
-  <template>
-
-    <div class="container">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
-    </div>
-
-    ...
+<!--
 ```
+<custom-element-demo>
+  <template>
+    <link rel="import" href="iron-flex-layout.html">
+    <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+    <style>
+      .container {
+        background-color: #ccc;
+        padding: 4px;
+      }
 
-**Example output**
+      .container div {
+        background-color: white;
+        padding: 12px;
+        margin: 4px;
+      }
+    </style>
+    <next-code-block></next-code-block>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<style is="custom-style">
+  .container {
+    @apply(--layout-horizontal);
+  }
+</style>
 
-<div style="background-color: #ccc; padding: 4px; margin: 12px">
-  <div style="background-color: white; padding: 12px; margin: 4px">One</div>
-  <div style="background-color: white; padding: 12px; margin: 4px">Two</div>
-  <div style="background-color: white; padding: 12px; margin: 4px">Three</div>
+<div class="container">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
 </div>
+```
 
 ### Flexible children
 
@@ -243,67 +252,16 @@ Class | Mixin | Result
 The classes listed here are included in the `iron-flex` module of the `iron-flex-layout-classes` file.
 
 **Example: classes**
-
-        <div class="horizontal layout">
-          <div>Alpha</div>
-          <div class="flex">Beta (flex)</div>
-          <div>Gamma</div>
-        </div>
-
-**Example: mixins**
-
-    <dom-module id="mixin-demo">
-
-      <style>
-        .container {
-          @apply --layout-horizontal;
-        }
-        .flexchild {
-          @apply --layout-flex;
-        }
-      </style>
-
-      <template>
-
-        <div class="container">
-          <div>One</div>
-          <div class="flexchild">Two</div>
-          <div>Three</div>
-        </div>
-
-        ...
-
-**Example output**
-
-<div class="horizontal layout demo">
-  <div>Alpha</div>
-  <div class="flex">Beta (flex)</div>
-  <div>Gamma</div>
-</div>
-
-#### Flexible children in vertical layouts
-
-The same rules can be used for children in vertical layouts.
-
-**Example: classes**
-
-    <div class="vertical layout" style="height:250px">
-      <div>Alpha</div>
-      <div class="flex">Beta (flex)</div>
-      <div>Gamma</div>
-    </div>
-
-**Example: mixins**
 <!--
 ```
 <custom-element-demo>
   <template>
-    <link rel="import" href="iron-flex-layout.html">
+    <link rel="import" href="iron-flex-layout-classes.html">
+    <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
     <style>
       .container {
         background-color: #ccc;
         padding: 4px;
-        margin: 12px;
       }
 
       .container div {
@@ -318,7 +276,93 @@ The same rules can be used for children in vertical layouts.
 ```
 -->
 ```html
-<style>
+<div class="horizontal layout">
+  <div>Alpha</div>
+  <div class="flex">Beta (flex)</div>
+  <div>Gamma</div>
+</div>
+```
+
+**Example: mixins**
+<!--
+```
+<custom-element-demo>
+  <template>
+    <link rel="import" href="iron-flex-layout.html">
+    <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+    <style>
+      .container {
+        background-color: #ccc;
+        padding: 4px;
+      }
+
+      .container div {
+        background-color: white;
+        padding: 12px;
+        margin: 4px;
+      }
+    </style>
+    <next-code-block></next-code-block>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<style is="custom-style">
+  .container {
+    @apply(--layout-horizontal);
+  }
+  .flexchild {
+    @apply(--layout-flex);
+  }
+</style>
+
+<div class="container">
+<div>Alpha</div>
+  <div class="flexchild">Beta (flex)</div>
+  <div>Gamma</div>
+</div>
+```
+
+#### Flexible children in vertical layouts
+
+The same rules can be used for children in vertical layouts.
+
+**Example: classes**
+```html
+<div class="vertical layout" style="height:250px">
+  <div>Alpha</div>
+  <div class="flex">Beta (flex)</div>
+  <div>Gamma</div>
+</div>
+```
+
+**Example: mixins**
+<!--
+```
+<custom-element-demo>
+  <template>
+    <link rel="import" href="iron-flex-layout.html">
+    <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+    <style>
+      .container {
+        background-color: #ccc;
+        padding: 4px;
+      }
+
+      .container div {
+        background-color: white;
+        padding: 12px;
+        margin: 4px;
+      }
+    </style>
+    <next-code-block></next-code-block>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<style is="custom-style">
   .container {
     @apply(--layout-vertical);
   }
