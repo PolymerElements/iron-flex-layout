@@ -1212,17 +1212,17 @@ to fit inside of.
     <link rel="import" href="iron-flex-layout-classes.html">
     <dom-module id="demo-element">
       <template>
-        <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+        <style is="custom-style" include="iron-flex iron-flex-alignment iron-positioning"></style>
         <style>
-          .container, .layout {
-            background-color: #ccc;
-            padding: 4px;
+          :host {
+            display: block;
+            background: #ccc;
           }
-
-          .container div, .layout div {
+          
+          .demo {
             background-color: white;
-            padding: 12px;
-            margin: 4px;
+            margin: 12px;
+            padding: 4px;
           }
         </style>
         <next-code-block></next-code-block>
@@ -1235,10 +1235,9 @@ to fit inside of.
 ```
 -->
 ```html
-<div>Before <span>[A Span]</span> After</div>
-
-<div>Before <span class="block">[A Block Span]</span> After</div>
-<div>Before invisible span <span class="invisible">Not displayed</span> After invisible span</div>
+<div class="demo">Before <span>[A Span]</span> After</div>
+<div class="demo">Before <span class="block">[A Block Span]</span> After</div>
+<div class="demo">Before invisible span <span class="invisible">Not displayed</span> After invisible span</div>
 <div class="relative" style="height: 100px;">
   <div class="fit" style="background-color: #000;color: white">Fit</div>
 </div>
