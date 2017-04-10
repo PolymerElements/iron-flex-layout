@@ -252,29 +252,6 @@ Class | Mixin | Result
 The classes listed here are included in the `iron-flex` module of the `iron-flex-layout-classes` file.
 
 **Example: classes**
-<!--
-```
-<custom-element-demo>
-  <template>
-    <link rel="import" href="iron-flex-layout-classes.html">
-    <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
-    <style>
-      .container {
-        background-color: #ccc;
-        padding: 4px;
-      }
-
-      .container div {
-        background-color: white;
-        padding: 12px;
-        margin: 4px;
-      }
-    </style>
-    <next-code-block></next-code-block>
-  </template>
-</custom-element-demo>
-```
--->
 ```html
 <div class="horizontal layout">
   <div>Alpha</div>
@@ -392,12 +369,13 @@ For example, the following examples make "Gamma" 2x larger than "Beta" and "Alph
 The classes listed here are included in the `iron-flex-factors` module of the `iron-flex-layout-classes` file.
 
 **Example: classes**
-
-        <div class="horizontal layout demo">
-          <div class="flex-3">Alpha</div>
-          <div class="flex">Beta</div>
-          <div class="flex-2">Gamma</div>
-        </div>
+```html
+<div class="horizontal layout demo">
+  <div class="flex-3">Alpha</div>
+  <div class="flex">Beta</div>
+  <div class="flex-2">Gamma</div>
+</div>
+```
 
 **Example: mixins**
 <!--
@@ -405,24 +383,37 @@ The classes listed here are included in the `iron-flex-factors` module of the `i
 <custom-element-demo>
   <template>
     <link rel="import" href="iron-flex-layout.html">
+    <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+    <style>
+      .container {
+        background-color: #ccc;
+        padding: 4px;
+      }
+
+      .container div {
+        background-color: white;
+        padding: 12px;
+        margin: 4px;
+      }
+    </style>
     <next-code-block></next-code-block>
   </template>
 </custom-element-demo>
 ```
 -->
 ```html
-<style>
+<style is="custom-style">
   .container {
-    @apply --layout-horizontal;
+    @apply(--layout-horizontal);
   }
   .flexchild {
-    @apply --layout-flex;
+    @apply(--layout-flex)
   }
   .flex2child {
-    @apply --layout-flex-2;
+    @apply(--layout-flex-2);
   }
   .flex3child {
-    @apply --layout-flex-3;
+    @apply(--layout-flex-3);
   }
 </style>
 
@@ -433,57 +424,38 @@ The classes listed here are included in the `iron-flex-factors` module of the `i
 </div>
 ```
 
-
-
-
-
-
-<!--
-### Auto-vertical
-
-For vertical layouts, you can use the `auto-vertical` attribute
-on a child element to set an automatic flex basis on that element.
-Use this attribute for responsive designs
-if you want elements laid out horizontally when the display is wide
-or vertically when narrow.
-
-The following code uses `core-media-query` to get the screen size.
-If it's smaller than 640 pixels,
-the layout becomes vertical and the elements layout on a flex basis.
-Otherwise, the layout becomes horizontal and the elements are laid out
-normally.
-
-{% raw %}
-    <template is="auto-binding">
-      <core-media-query query="max-width: 640px"
-                        queryMatches="{{phoneScreen}}"></core-media-query>
-      <div layout vertical?="{{phoneScreen}}"
-           horizontal?="{{!phoneScreen}}">
-        <div auto-vertical>Alpha</div>
-        <div auto-vertical>Beta</div>
-        <div auto-vertical>Gamma</div>
-      </div>
-    </template>
-{% endraw %}
-
-<div vertical layout class="demo" style="height:170px">
-  <div auto-vertical>Alpha</div>
-  <div auto-vertical>Beta</div>
-  <div auto-vertical>Gamma</div>
-</div>
--->
-
 ### Cross-axis alignment
 
 By default, children stretch to fit the cross-axis (e.g. _vertical_ stretching in a _horizontal_ layout).
 
-    <div class="horizontal layout">
-      <div>Stretch Fill</div>
-    </div>
+<!--
+```
+<custom-element-demo>
+  <template>
+    <link rel="import" href="iron-flex-layout-classes.html">
+    <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+    <style>
+      .container {
+        background-color: #ccc;
+        padding: 4px;
+      }
 
-<div class="horizontal layout demo tall">
+      .container div {
+        background-color: white;
+        padding: 12px;
+        margin: 4px;
+      }
+    </style>
+    <next-code-block></next-code-block>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<div class="horizontal layout container" style="height: 154px">
   <div>Stretch Fill</div>
 </div>
+```
 
 Center _across_ the main axis (e.g. _vertical_ centering elements in a _horizontal_ layout)
 by adding the `center` class or applying the `--layout-center` mixin.
