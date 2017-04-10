@@ -27,5 +27,8 @@
     "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0",
     "web-component-tester": "^4.0.0"
   },
+  "pages": {
+    "Flexbox layout guide": "GUIDE.md"
+  },
   "ignore": []
 }
