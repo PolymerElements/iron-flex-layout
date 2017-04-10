@@ -126,8 +126,8 @@ main document. (They cannot be applied in the main document without a `custom-st
   <!-- main document -- apply mixins in a custom-style element -->
   <style is="custom-style">
     .container {
-      @apply --layout-horizontal;
-      @apply --layout-wrap;
+      @apply(--layout-horizontal);
+      @apply(--layout-wrap);
     }
   </style>
 
@@ -153,8 +153,8 @@ main document. (They cannot be applied in the main document without a `custom-st
   <!-- inside an element -- apply mixins in a standard style element -->
   <style>
     .container {
-      @apply --layout-horizontal;
-      @apply --layout-wrap;
+      @apply(--layout-horizontal);
+      @apply(--layout-wrap);
     }
   </style>
 
@@ -461,7 +461,7 @@ By default, children stretch to fit the cross-axis (e.g. _vertical_ stretching i
       <template>
         <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
         <style>
-          .container {
+          .container, .layout {
             background-color: #ccc;
             padding: 4px;
           }
@@ -500,7 +500,7 @@ by adding the `center` class or applying the `--layout-center` mixin.
       <template>
         <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
         <style>
-          .container {
+          .container, .layout {
             background-color: #ccc;
             padding: 4px;
           }
@@ -536,7 +536,7 @@ by adding the `center` class or applying the `--layout-center` mixin.
       <template>
         <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
         <style>
-          .container {
+          .container, .layout {
             background-color: #ccc;
             padding: 4px;
             height: 154px;
@@ -584,7 +584,7 @@ classes, or by applying the `--layout-start` or `--layout-end` mixins.
       <template>
         <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
         <style>
-          .container {
+          .container, .layout {
             background-color: #ccc;
             padding: 4px;
           }
@@ -663,7 +663,7 @@ classes, or by applying the `--layout-start` or `--layout-end` mixins.
       <template>
         <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
         <style>
-          .container {
+          .container, .layout {
             background-color: #ccc;
             padding: 4px;
           }
@@ -758,7 +758,7 @@ The classes listed here are included in the `iron-flex-alignment` module of the 
       <template>
         <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
         <style>
-          .container {
+          .container, .layout {
             background-color: #ccc;
             padding: 4px;
           }
@@ -837,7 +837,7 @@ The classes listed here are included in the `iron-flex-alignment` module of the 
       <template>
         <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
         <style>
-          .container {
+          .container, .layout {
             background-color: #ccc;
             padding: 4px;
           }
@@ -918,7 +918,7 @@ The classes listed here are included in the `iron-flex-alignment` module of the 
       <template>
         <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
         <style>
-          .container {
+          .container, .layout {
             background-color: #ccc;
             padding: 4px;
           }
@@ -966,7 +966,7 @@ Class | Mixin | Result
       <template>
         <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
         <style>
-          .container {
+          .container, .layout {
             background-color: #ccc;
             padding: 4px;
           }
@@ -1075,7 +1075,7 @@ Wrapped layouts can be enabled with the `wrap` class or `--layout-wrap` mixin.
       <template>
         <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
         <style>
-          .container {
+          .container, .layout {
             background-color: #ccc;
             padding: 4px;
           }
