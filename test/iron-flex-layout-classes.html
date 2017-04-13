@@ -113,6 +113,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                rect.left === left && rect.right === right;
       }
       suite('basic layout', function() {
+        suiteSetup(function() {
+          // In Polymer 2.0, custom-style is lazy, and won't boot until a
+          // Polymer element is used (and these tests don't have a Polymer element).
+          if (Polymer.Element) {
+            window.ShadyCSS.styleDocument();
+          }
+        });
+        
         var container;
 
         setup(function() {
