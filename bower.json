@@ -42,4 +42,8 @@
       }
     }
   }
+  "pages": {
+    "Flexbox layout guide": "GUIDE.md"
+  },
+  "ignore": []
 }
