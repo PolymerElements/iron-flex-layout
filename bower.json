@@ -41,7 +41,7 @@
         "iron-demo-helpers": "polymerelements/iron-demo-helpers#^1.0.0"
       }
     }
-  }
+  },
   "pages": {
     "Flexbox layout guide": "GUIDE.md"
   },
