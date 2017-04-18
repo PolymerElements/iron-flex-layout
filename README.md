@@ -1,7 +1,7 @@
 [![Build status](https://travis-ci.org/PolymerElements/iron-flex-layout.svg?branch=master)](https://travis-ci.org/PolymerElements/iron-flex-layout)
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://beta.webcomponents.org/element/PolymerElements/iron-flex-layout)
 
-##&lt;iron-flex-layout&gt;
+## &lt;iron-flex-layout&gt;
 
 The `<iron-flex-layout>` component provides simple ways to use
 [CSS flexible box layout](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes),
@@ -14,13 +14,28 @@ in every element that needs to use them.
 
 Sample use:
 
-   <link rel="import" href="../iron-flex-layout/iron-flex-layout-classes.html">
+<!--
+```
+<custom-element-demo>
+  <template>
+    <script src="../webcomponentsjs/webcomponents-lite.js"></script>
+    <next-code-block></next-code-block>
+  </template>
+</custom-element-demo>
+```
+--->
+```html
+<link rel="import" href="../iron-flex-layout/iron-flex-layout-classes.html">
 
-   <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+<style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+<style>
+  .test { width: 100px; }
+</style>
 
-   <div class="layout horizontal layout-start">
-     <div>cross axis start alignment</div>
-   </div>
+<div class="layout horizontal layout-start">
+  <div>cross axis start alignment</div>
+</div>
+```
 
 1. [Custom CSS mixins](https://github.com/PolymerElements/iron-flex-layout/blob/master/iron-flex-layout.html).
 The mixin stylesheet includes custom CSS mixins that can be applied inside a CSS rule using the `@apply` function.
