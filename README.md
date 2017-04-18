@@ -14,7 +14,7 @@ in every element that needs to use them.
 
 Sample use:
 
-<!--
+<!---
 ```
 <custom-element-demo>
   <template>
@@ -23,7 +23,7 @@ Sample use:
   </template>
 </custom-element-demo>
 ```
---->
+-->
 ```html
 <link rel="import" href="../iron-flex-layout/iron-flex-layout-classes.html">
 
