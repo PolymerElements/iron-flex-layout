@@ -14,25 +14,38 @@ in every element that needs to use them.
 
 Sample use:
 
-<!---
+<!--
 ```
 <custom-element-demo>
   <template>
-    <script src="../webcomponentsjs/webcomponents-lite.js"></script>
-    <next-code-block></next-code-block>
+    <script src="../webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="import" href="iron-flex-layout-classes.html">
+    <dom-module id="demo-element">
+      <template>
+        <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+        <style>
+          .container, .layout {
+            background-color: #ccc;
+            padding: 4px;
+          }
+
+          .container div, .layout div {
+            background-color: white;
+            padding: 12px;
+            margin: 4px;
+          }
+        </style>
+        <next-code-block></next-code-block>
+      </template>
+      <script>Polymer({is: "demo-element"});</script>
+    </dom-module>
+    <demo-element></demo-element>
   </template>
 </custom-element-demo>
 ```
 -->
 ```html
-<link rel="import" href="../iron-flex-layout/iron-flex-layout-classes.html">
-
-<style is="custom-style" include="iron-flex iron-flex-alignment"></style>
-<style>
-  .test { width: 100px; }
-</style>
-
-<div class="layout horizontal layout-start">
+<div class="layout horizontal layout-start" style="height: 154px">
   <div>cross axis start alignment</div>
 </div>
 ```
