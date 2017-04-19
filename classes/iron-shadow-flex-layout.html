@@ -8,11 +8,18 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 
+<link rel="import" href="../../polymer/polymer.html">
+
 <script>
   console.warn('This file is deprecated. Please use `iron-flex-layout/iron-flex-layout-classes.html`, and one of the specific dom-modules instead');
 </script>
 
-<style>
+<!-- Apply a custom-style so that the /deep/ styles are removed in the shady dom.
+Skip initially loading the stylesheet before Polymer gets to apply
+the custom-style shim to it (as the /deep/ warnings will still get generated in
+that case) -->
+
+<style is="custom-style" type="shim-hack">
 
   /*******************************
             Flex Layout
