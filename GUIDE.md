@@ -431,7 +431,7 @@ The classes listed here are included in the `iron-flex-factors` module of the `i
     @apply --layout-horizontal;
   }
   .flexchild {
-    @apply(--layout-flex)
+    @apply --layout-flex;
   }
   .flex2child {
     @apply --layout-flex-2;
