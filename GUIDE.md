@@ -126,8 +126,8 @@ main document. (They cannot be applied in the main document without a `custom-st
   <!-- main document -- apply mixins in a custom-style element -->
   <style is="custom-style">
     .container {
-      @apply(--layout-horizontal);
-      @apply(--layout-wrap);
+      @apply --layout-horizontal;
+      @apply --layout-wrap;
     }
   </style>
 
@@ -153,8 +153,8 @@ main document. (They cannot be applied in the main document without a `custom-st
   <!-- inside an element -- apply mixins in a standard style element -->
   <style>
     .container {
-      @apply(--layout-horizontal);
-      @apply(--layout-wrap);
+      @apply --layout-horizontal;
+      @apply --layout-wrap;
     }
   </style>
 
@@ -233,7 +233,7 @@ The classes listed here are included in the `iron-flex` module of the `iron-flex
 ```html
 <style is="custom-style">
   .container {
-    @apply(--layout-horizontal);
+    @apply --layout-horizontal;
   }
 </style>
 
@@ -299,10 +299,10 @@ The classes listed here are included in the `iron-flex` module of the `iron-flex
 ```html
 <style is="custom-style">
   .container {
-    @apply(--layout-horizontal);
+    @apply --layout-horizontal;
   }
   .flexchild {
-    @apply(--layout-flex);
+    @apply --layout-flex;
   }
 </style>
 
@@ -359,10 +359,10 @@ The same rules can be used for children in vertical layouts.
 ```html
 <style is="custom-style">
   .container {
-    @apply(--layout-vertical);
+    @apply --layout-vertical;
   }
   .flexchild {
-    @apply(--layout-flex);
+    @apply --layout-flex;
   }
 </style>
 
@@ -428,16 +428,16 @@ The classes listed here are included in the `iron-flex-factors` module of the `i
 ```html
 <style is="custom-style">
   .container {
-    @apply(--layout-horizontal);
+    @apply --layout-horizontal;
   }
   .flexchild {
     @apply(--layout-flex)
   }
   .flex2child {
-    @apply(--layout-flex-2);
+    @apply --layout-flex-2;
   }
   .flex3child {
-    @apply(--layout-flex-3);
+    @apply --layout-flex-3;
   }
 </style>
 
@@ -560,8 +560,8 @@ by adding the `center` class or applying the `--layout-center` mixin.
 ```html
 <style is="custom-style">
   .container {
-    @apply(--layout-horizontal);
-    @apply(--layout-center);
+    @apply --layout-horizontal;
+    @apply --layout-center;
   }
 </style>
 
@@ -643,8 +643,8 @@ classes, or by applying the `--layout-start` or `--layout-end` mixins.
 ```html
 <style is="custom-style">
   .container {
-    @apply(--layout-horizontal);
-    @apply(--layout-start);
+    @apply --layout-horizontal;
+    @apply --layout-start;
   }
 </style>
 
@@ -722,8 +722,8 @@ classes, or by applying the `--layout-start` or `--layout-end` mixins.
 ```html
 <style is="custom-style">
   .container {
-    @apply(--layout-horizontal);
-    @apply(--layout-end);
+    @apply --layout-horizontal;
+    @apply --layout-end;
   }
 </style>
 
@@ -817,8 +817,8 @@ The classes listed here are included in the `iron-flex-alignment` module of the 
 ```html
 <style is="custom-style">
   .container {
-    @apply(--layout-horizontal);
-    @apply(--layout-center-justified);
+    @apply --layout-horizontal;
+    @apply --layout-center-justified;
   }
 </style>
 
@@ -896,8 +896,8 @@ The classes listed here are included in the `iron-flex-alignment` module of the 
 ```html
 <style is="custom-style">
   .container {
-    @apply(--layout-horizontal);
-    @apply(--layout-justified);
+    @apply --layout-horizontal;
+    @apply --layout-justified;
   }
 </style>
 
@@ -1028,24 +1028,24 @@ Class | Mixin | Result
 ```html
 <style is="custom-style">
   .container {
-    @apply(--layout-horizontal);
-    @apply(--layout-justified);
+    @apply --layout-horizontal;
+    @apply --layout-justified;
     height: 120px;
   }
   .container div {
-    @apply(--layout-flex);
+    @apply --layout-flex;
   }
   .child1 {
-    @apply(--layout-self-start);
+    @apply --layout-self-start;
   }
   .child2 {
-    @apply(--layout-self-center);
+    @apply --layout-self-center;
   }
   .child3 {
-    @apply(--layout-self-end);
+    @apply --layout-self-end;
   }
   .child4 {
-    @apply(--layout-self-stretch);
+    @apply --layout-self-stretch;
   }
 </style>
 <div class="container">
@@ -1149,7 +1149,7 @@ The classes listed here are included in the `iron-flex-reverse` module of the `i
 ```html
 <style is="custom-style">
   .container {
-    @apply(--layout-horizontal-reverse);
+    @apply --layout-horizontal-reverse;
   }
 </style>
 
