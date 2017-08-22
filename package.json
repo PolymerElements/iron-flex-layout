@@ -1,0 +1,24 @@
+{
+  "name": "@polymer/iron-flex-layout",
+  "flat": true,
+  "version": "3.0.0-pre.1",
+  "description": "Provide flexbox-based layouts",
+  "contributors": [
+    "The Polymer Authors"
+  ],
+  "keywords": [
+    "web-components",
+    "polymer",
+    "layout"
+  ],
+  "main": "iron-flex-layout.html",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/PolymerElements/iron-flex-layout.git"
+  },
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "dependencies": {
+    "@polymer/polymer": "^3.0.0-pre.1"
+  },
+  "devDependencies": {}
+}
