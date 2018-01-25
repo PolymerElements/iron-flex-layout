@@ -6,5 +6,11 @@
     "type": "git",
     "url": "git://github.com/PolymerElements/iron-flex-layout.git"
   },
-  "license": "http://polymer.github.io/LICENSE.txt"
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "devDependencies": {
+    "@polymer/gen-typescript-declarations": "^1.0.0"
+  },
+  "scripts": {
+    "update-types": "rm -f *.d.ts **/*.d.ts && gen-typescript-declarations --outDir ."
+  }
 }
