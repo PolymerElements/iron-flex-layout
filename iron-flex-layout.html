@@ -58,6 +58,17 @@ A complete [guide](https://elements.polymer-project.org/guides/flex-layout) to `
 @pseudoElement iron-flex-layout
 @demo demo/index.html
 -->
+<script>
+  // TODO (emarquez): remove when we have a fleshed out /deep/ solution
+  // required for backwards compat for projects that rely on a global [hidden[
+  (function() {
+    if (Polymer.Settings && !Polymer.Settings.useNativeShadow) {
+      var style = document.createElement('style');
+      style.textContent = '[hidden] { display: none !important; }';
+      document.head.appendChild(style);
+    }
+  })();
+</script>
 <custom-style>
   <style is="custom-style">
     /* IE 10 support for HTML5 hidden attr */
