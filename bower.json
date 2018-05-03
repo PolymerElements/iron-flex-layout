@@ -7,7 +7,7 @@
     "polymer",
     "layout"
   ],
-  "main": "iron-flex-layout.html",
+  "main": ["iron-flex-layout.html", "iron-flex-layout-classes.html"],
   "private": true,
   "license": "http://polymer.github.io/LICENSE.txt",
   "authors": [
