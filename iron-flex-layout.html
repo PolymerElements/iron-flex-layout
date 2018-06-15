@@ -109,20 +109,26 @@ A complete [guide](https://elements.polymer-project.org/guides/flex-layout) to `
         flex-direction: row-reverse;
       };
 
-      --layout-vertical: {
-        @apply --layout;
-
+      --layout-direction-column: {
         -ms-flex-direction: column;
         -webkit-flex-direction: column;
         flex-direction: column;
       };
-
-      --layout-vertical-reverse: {
+      
+      --layout-vertical: {
         @apply --layout;
+        @apply --layout-direction-column;
+      };
 
+      --layout-direction-column-reverse: {
         -ms-flex-direction: column-reverse;
         -webkit-flex-direction: column-reverse;
         flex-direction: column-reverse;
+      };
+
+      --layout-vertical-reverse: {
+        @apply --layout;
+        @apply --layout-direction-column-reverse;
       };
 
       --layout-wrap: {
