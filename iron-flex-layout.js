@@ -1,4 +1,4 @@
-<!--
+/**
 @license
 Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
 This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
@@ -6,11 +6,8 @@ The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
-
-<link rel="import" href="../polymer/polymer.html">
-
-<!--
+*/
+/**
 The `<iron-flex-layout>` component provides simple ways to use
 [CSS flexible box layout](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes),
 also known as flexbox. This component provides two different ways to use flexbox:
@@ -57,27 +54,24 @@ A complete [guide](https://elements.polymer-project.org/guides/flex-layout) to `
 @group Iron Elements
 @pseudoElement iron-flex-layout
 @demo demo/index.html
--->
-<script>
-  // This is left only for backward compatibility with projects
-  // that incorrectly relied on unscoped global [hidden] rules;
-  // removing would be a breaking change, but new projects
-  // should never rely on this.
-  (function() {
-  var style = document.createElement('style');
-  style.textContent = '[hidden] { display: none !important; }';
-  document.head.appendChild(style);
-  })();
-</script>
-<custom-style>
+*/
+/*
+  FIXME(polymer-modulizer): the above comments were extracted
+  from HTML and may be out of place here. Review them and
+  then delete this comment!
+*/
+import '@polymer/polymer/polymer-legacy.js';
+
+const $_documentContainer = document.createElement('template');
+$_documentContainer.setAttribute('style', 'display: none;');
+
+$_documentContainer.innerHTML = `<custom-style>
   <style is="custom-style">
     [hidden] {
       display: none !important;
     }
   </style>
-</custom-style>
-
-<custom-style>
+</custom-style><custom-style>
   <style is="custom-style">
     html {
 
@@ -421,4 +415,9 @@ A complete [guide](https://elements.polymer-project.org/guides/flex-layout) to `
 
     }
   </style>
-</custom-style>
+</custom-style>`;
+
+document.head.appendChild($_documentContainer.content);
+var style = document.createElement('style');
+style.textContent = '[hidden] { display: none !important; }';
+document.head.appendChild(style);
