@@ -17,12 +17,18 @@ markup. You must include this file in every element that needs to use them.
 
 Sample use:
 
-    <link rel="import" href="../iron-flex-layout/iron-flex-layout-classes.html">
-    <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+    import '@polymer/iron-flex-layout/iron-flex-layout-classes.js';
 
-    <div class="layout horizontal layout-start">
-      <div>cross axis start alignment</div>
-    </div>
+    const template = html`
+      <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+      <style>
+        .test { width: 100px; }
+      </style>
+      <div class="layout horizontal center-center">
+        <div class="test">horizontal layout center alignment</div>
+      </div>
+    `;
+    document.body.appendChild(template.content);
 
 The following imports are available:
  - iron-flex

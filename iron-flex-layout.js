@@ -11,13 +11,16 @@ found at http://polymer.github.io/PATENTS.txt
 import '@polymer/polymer/polymer-legacy.js';
 import {html} from '@polymer/polymer/lib/utils/html-tag.js';
 
-debugger
 /**
 The `<iron-flex-layout>` component provides simple ways to use
 [CSS flexible box
 layout](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes),
-also known as flexbox. This component provides two different ways to use
-flexbox:
+also known as flexbox. Note that this is an old element, that was written
+before all modern browsers had non-prefixed flex styles. As such, nowadays you
+don't really need to use this element anymore, and can use CSS flex styles
+directly in your code.
+
+This component provides two different ways to use flexbox:
 
 1. [Layout
 classes](https://github.com/PolymerElements/iron-flex-layout/tree/master/iron-flex-layout-classes.html).
@@ -36,15 +39,20 @@ file in every element that needs to use them.
     </custom-element-demo>
     ```
 
-    ```html
-    <link rel="import" href="iron-flex-layout-classes.html">
-    <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
-    <style>
-      .test { width: 100px; }
-    </style>
-    <div class="layout horizontal center-center">
-      <div class="test">horizontal layout center alignment</div>
-    </div>
+    ```js
+    import {html} from '@polymer/polymer/lib/utils/html-tag.js';
+    import '@polymer/iron-flex-layout/iron-flex-layout-classes.js';
+
+    const template = html`
+      <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+      <style>
+        .test { width: 100px; }
+      </style>
+      <div class="layout horizontal center-center">
+        <div class="test">horizontal layout center alignment</div>
+      </div>
+    `;
+    document.body.appendChild(template.content);
     ```
 
 2. [Custom CSS
@@ -60,9 +68,6 @@ directly in markup, please switch to using the new `dom-module`-based
 classes](https://github.com/PolymerElements/iron-flex-layout/tree/master/iron-flex-layout-classes.html).
 Please note that the new version does not use `/deep/`, and therefore requires
 you to import the `dom-modules` in every element that needs to use them.
-
-A complete [guide](https://elements.polymer-project.org/guides/flex-layout) to
-`<iron-flex-layout>` is available.
 
 @group Iron Elements
 @pseudoElement iron-flex-layout
