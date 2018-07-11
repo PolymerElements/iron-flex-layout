@@ -11,6 +11,7 @@ found at http://polymer.github.io/PATENTS.txt
 import '@polymer/polymer/polymer-legacy.js';
 import {html} from '@polymer/polymer/lib/utils/html-tag.js';
 
+debugger
 /**
 The `<iron-flex-layout>` component provides simple ways to use
 [CSS flexible box

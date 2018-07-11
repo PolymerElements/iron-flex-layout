@@ -16,59 +16,49 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
 
-    <script src="../../../@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
-    <script src="../../../wct-browser-legacy/browser.js"></script>
-    <script type="module" src="../iron-flex-layout-classes.js"></script>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script src="../node_modules/wct-browser-legacy/browser.js"></script>
 
-    <script type="module">
-      import {html} from '@polymer/polymer/lib/utils/html-tag.js';
-      const template = html`
-        <custom-style>
-          <style is="custom-style" include="iron-flex iron-flex-reverse iron-flex-factors iron-flex-alignment iron-positioning">
-            body {
-              margin: 0;
-              padding: 0;
-            }
-            .container {
-              width: 300px;
-              min-height: 50px;
-              background-color: #ccc;
-            }
-            .container > div {
-              width: 50px;
-              min-height: 50px; /* so that it can grow in vertical layouts. */
-            }
-            /* IE11 does not calculate flex proportions correctly in a vertical
-             * layout if the children just have a min-height. For those tests,
-             * use a fixed height instead. */
-            .container > div.fixed-height {
-              min-height: 0;
-              height: 50px;
-            }
-            .container.relative > div {
-              min-width: 50px;
-              min-height: 50px;
-              width: inherit;
-            }
-            .container.small { width: 120px; }
-            .container.tall { height: 300px; }
+    <custom-style>
+      <style is="custom-style" include="iron-flex iron-flex-reverse iron-flex-factors iron-flex-alignment iron-positioning">
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        .container {
+          width: 300px;
+          min-height: 50px;
+          background-color: #ccc;
+        }
+        .container > div {
+          width: 50px;
+          min-height: 50px; /* so that it can grow in vertical layouts. */
+        }
+        /* IE11 does not calculate flex proportions correctly in a vertical
+         * layout if the children just have a min-height. For those tests,
+         * use a fixed height instead. */
+        .container > div.fixed-height {
+          min-height: 0;
+          height: 50px;
+        }
+        .container.relative > div {
+          min-width: 50px;
+          min-height: 50px;
+          width: inherit;
+        }
+        .container.small { width: 120px; }
+        .container.tall { height: 300px; }
 
-            #c1 { background-color: #E91E63; }
-            #c2 { background-color: #03A9F4; }
-            #c3 { background-color: #CDDC39; }
-            #c4 { background-color: #03A9F4; }
-            #c5 { background-color: #E91E63; }
-          </style>
-        </custom-style>
-        `;
-        document.body.appendChild(template.content);
-    </script>
+        #c1 { background-color: #E91E63; }
+        #c2 { background-color: #03A9F4; }
+        #c3 { background-color: #CDDC39; }
+        #c4 { background-color: #03A9F4; }
+        #c5 { background-color: #E91E63; }
+      </style>
+    </custom-style>
   </head>
   <body>
-    <script type="module">
-      const $_documentContainer = document.createElement('template');
-
-      $_documentContainer.innerHTML = `<test-fixture id="basic">
+    <test-fixture id="basic">
       <template>
         <div class="container layout">
           <div id="c1"></div>
@@ -76,15 +66,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <div id="c3"></div>
         </div>
       </template>
-    </test-fixture>`;
+    </test-fixture>
 
-      document.body.appendChild($_documentContainer.content);
-    </script>
-
-    <script type="module">
-      const $_documentContainer = document.createElement('template');
-
-      $_documentContainer.innerHTML = `<test-fixture id="flex">
+    <test-fixture id="flex">
       <template>
         <div class="container layout">
           <div id="c1" class="fixed-height"></div>
@@ -92,43 +76,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <div id="c3" class="fixed-height"></div>
         </div>
       </template>
-    </test-fixture>`;
+    </test-fixture>
 
-      document.body.appendChild($_documentContainer.content);
-    </script>
-
-    <script type="module">
-      const $_documentContainer = document.createElement('template');
-
-      $_documentContainer.innerHTML = `<test-fixture id="single-child">
+    <test-fixture id="single-child">
       <template>
         <div class="container layout">
           <div id="c1"></div>
         </div>
       </template>
-    </test-fixture>`;
+    </test-fixture>
 
-      document.body.appendChild($_documentContainer.content);
-    </script>
-
-    <script type="module">
-      const $_documentContainer = document.createElement('template');
-
-      $_documentContainer.innerHTML = `<test-fixture id="positioning">
+    <test-fixture id="positioning">
       <template>
         <div class="container layout relative">
           <div id="c1"></div>
         </div>
       </template>
-    </test-fixture>`;
+    </test-fixture>
 
-      document.body.appendChild($_documentContainer.content);
-    </script>
-
-    <script type="module">
-      const $_documentContainer = document.createElement('template');
-
-      $_documentContainer.innerHTML = `<test-fixture id="align-content">
+    <test-fixture id="align-content">
       <template>
         <div class="container layout">
           <div id="c1"></div>
@@ -138,18 +104,27 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <div id="c5"></div>
         </div>
       </template>
-    </test-fixture>`;
+    </test-fixture>
 
-      document.body.appendChild($_documentContainer.content);
-    </script>
     <script type="module">
       import '../iron-flex-layout-classes.js';
       import {PolymerElement} from '@polymer/polymer/polymer-element.js';
       function positionEquals(node, top, bottom, left, right) {
+        function basicallyEquals(one, two) {
+          var val = Math.abs(one - two);
+          return val >= 0 && val <= 0.001;
+        }
+
         var rect = node.getBoundingClientRect();
-        return rect.top === top && rect.bottom === bottom && rect.left === left &&
-            rect.right === right;
+
+        // Note(notwaldorf): In Safari 11.1.1 I'm noticing there's a rounding
+        // error where the value is 49.999996185302734 instead of 50, for example.
+        // Do an approximate inequality instead.
+        return basicallyEquals(rect.top, top) &&
+            basicallyEquals(rect.bottom, bottom) &&
+            basicallyEquals(rect.left, left) && basicallyEquals(rect.right, right);
       }
+
       suite('basic layout', function() {
         suiteSetup(function() {
           // In Polymer 2.0, custom-style is lazy, and won't boot until a
