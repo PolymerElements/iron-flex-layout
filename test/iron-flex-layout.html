@@ -132,7 +132,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </test-fixture>
     <script type="module">
       import '../iron-flex-layout.js';
-      import {PolymerElement} from '@polymer/polymer/polymer-element.js';
 
       function positionEquals(node, top, bottom, left, right) {
         function basicallyEquals(one, two) {
@@ -152,11 +151,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       suite('basic layout', function() {
         suiteSetup(function() {
-          // In Polymer 2.0, custom-style is lazy, and won't boot until a
+          // custom-style is lazy, and won't boot until a
           // Polymer element is used (and these tests don't have a Polymer element).
-          if (PolymerElement) {
-            window.ShadyCSS.styleDocument();
-          }
+          window.ShadyCSS.styleDocument();
         });
 
         var container;
