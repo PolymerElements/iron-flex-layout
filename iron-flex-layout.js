@@ -69,9 +69,7 @@ classes](https://github.com/PolymerElements/iron-flex-layout/tree/master/iron-fl
 Please note that the new version does not use `/deep/`, and therefore requires
 you to import the `dom-modules` in every element that needs to use them.
 
-@group Iron Elements
 @pseudoElement iron-flex-layout
-@demo demo/index.html
 */
 const template = html`
 <custom-style>
