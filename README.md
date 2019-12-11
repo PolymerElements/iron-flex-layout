@@ -15,12 +15,12 @@ See: [Documentation](https://www.webcomponents.org/element/@polymer/iron-flex-la
 
 This component provides two different ways to use flexbox:
 
-1. [Layout classes](https://github.com/PolymerElements/iron-flex-layout/tree/master/iron-flex-layout-classes.html).
+1. [Layout classes](https://github.com/PolymerElements/iron-flex-layout/blob/master/iron-flex-layout-classes.js).
 The layout class stylesheet provides a simple set of class-based flexbox rules, that
 let you specify layout properties directly in markup. You must include this file
 in every element that needs to use them.
 
-1. [Custom CSS mixins](https://github.com/PolymerElements/iron-flex-layout/blob/master/iron-flex-layout.html).
+1. [Custom CSS mixins](https://github.com/PolymerElements/iron-flex-layout/blob/master/iron-flex-layout.js).
 The mixin stylesheet includes custom CSS mixins that can be applied inside a CSS rule using the `@apply` function.
 
 ## Usage
