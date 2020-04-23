@@ -39,7 +39,7 @@ The following imports are available:
 */
 
 const template = html`
-/* Most common used flex styles*/
+<!-- Most common used flex styles -->
 <dom-module id="iron-flex">
   <template>
     <style>
@@ -116,7 +116,7 @@ const template = html`
     </style>
   </template>
 </dom-module>
-/* Basic flexbox reverse styles */
+<!-- Basic flexbox reverse styles -->
 <dom-module id="iron-flex-reverse">
   <template>
     <style>
@@ -147,7 +147,7 @@ const template = html`
     </style>
   </template>
 </dom-module>
-/* Flexbox alignment */
+<!-- Flexbox alignment -->
 <dom-module id="iron-flex-alignment">
   <template>
     <style>
@@ -286,7 +286,7 @@ const template = html`
     </style>
   </template>
 </dom-module>
-/* Non-flexbox positioning helper styles */
+<!-- Non-flexbox positioning helper styles -->
 <dom-module id="iron-flex-factors">
   <template>
     <style>
